@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Configure your GT Super Sportscar</title>
+	<link href="caroptions.css" rel="stylesheet"/>
+	<script src="caroptions.js" defer></script>
+</head>
+<body>
+	<h1>Configure Your GT Super Sportscar</h1>
+	<div id="panel">
+		<div id="configuration">
+			<form id="formone" class="configuration_element">
+				<h2>Configuration</h2>
+				<table>
+					<tr>
+						<td><input name="configuration" id="gtmanual" type="radio" value="gt-manual" checked="checked"><label for="gtmanual">GT Manual</label></td><td></td><td class ="prices" id ="pricegtmanual">$17,790.00</td>
+					</tr>
+					<tr>
+						<td><input name="configuration" id="gtautomatic" type="radio" value="gt-automatic"><label for="gtautomatic">GT Automatic</label></td><td></td><td class ="prices" id ="pricegtautomatic">$18,590.00</td>
+					</tr>
+					<tr>
+						<td><input name="configuration" id="gtsmanual" type="radio" value="gt-s-manual"><label for="gtsmanual">GT-S Manual</label></td><td></td><td class ="prices" id ="pricegtsmanual">$22,455.00</td>
+					</tr>
+						<tr>
+						<td><input name="configuration" id="gtssportshift" type="radio" value="gt-s-sportshift"><label for="gtssportshift">GT-S Sportshift</label></td><td></td><td class ="prices" id ="pricegts">$23,155.00</td>
+					</tr>
+				</table>
+			</form>
+			<form class="configuration_element" id="formtwo">
+				<h2>Factory Options</h2>
+				<table>
+					<tr>
+						<td><input name="factoryOptions" id="optioncombo1" type="radio" value="option-combo-1"><label for="optioncombo1">Option Combo #1</label></td><td></td><td class ="prices" id ="priceoptioncombo1">$1,235.00</td>
+					</tr>
+					<tr>
+						<td class="listoptions">
+							<ul>
+								<li>Power Windows, Doors, Cruise Control</li>
+							</ul>
+						</td>
+						<td>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td><input name="factoryOptions" id="optioncombo2" type="radio" value="option-combo-2"><label for="optioncombo2">Option Combo #2</label></td><td></td><td class ="prices" id ="priceoptioncombo2">$3,354.00</td>
+					</tr>
+					<tr>
+						<td class="listoptions">
+							<ul>
+								<li>Rear Spoiler and Fog Lamps</li>
+								<li>KeyLess Entry</li>
+								<li>Power Tilt &amp; Slide Moonroof</li>
+								<li>Power Windows, Doors, Cruise Control</li>
+							</ul>
+						</td>
+						<td>
+						</td>
+						<td>
+						</td>
+					</tr>
+					<tr>
+						<td><input name="factoryOptions" id="nocombo" type="radio" value="nocombo" checked="checked"><label for="nocombo">No Combo</label></td><td></td><td class ="prices" id ="pricenocombo">$0</td>
+					</tr>
+				</table>
+			</form>
+			<form id ="dealeroptions" class="configuration_element">
+				<h2>Dealer Options</h2>
+				<table>
+					<tr><td><input type="checkbox" id="upgradedstereosystem" value="upgradedstereosystem" name ="upgradedstereosystem"/><label for="upgradedstereosystem">Upgraded Stereo System</label></td><td></td><td class ="prices" id ="priceupgradedstereosystem">$550.00</td></tr>
+					<tr><td><input type="checkbox" id="vipsecuritysystem" value="vip-security-system" name="vipsecuritysystem"/><label for="vipsecuritysystem">VIP Security System</label></td><td></td><td class ="prices" id ="pricevipsecuritysystem">$399.00</td></tr>
+					<tr><td><input type="checkbox" id="autodimmingmirror" value="auto-dimming-mirror" name="autodimmingmirror"/><label for="autodimmingmirror">Auto Dimming Mirror</label></td><td></td><td class ="prices" id ="priceautodimmingmirror">$295.00</td></tr>
+				</table>
+			</form>
+			<form class="configuration_element">
+				<h2>Total Price</h2>
+				<table>
+					<tr><td><input id="totaldisplay" type="text"/></td><td></td><td><input id="calculatetotal" type="button" value="Calculate Total" onclick="calculateTotalCost()"></td></tr>
+				</table>
+			</form>
+		</div><!-- end configuration-->
+			<form id="colorchooser" class="configuration_element">
+				<h2>Choose A Color</h2>
+				<div id="dropdown">
+					<select size ="5" name="carColor" id="carcolor" onchange="changeCarColor();">
+						<option id ="redcar" value ="red" selected>Red</option>
+						<option id ="bluecar" value ="blue">Blue</option>
+						<option id ="silvercar" value ="silver">Silver</option>
+						<option id ="whitecar" value ="white">White</option>
+						<option id ="blackcar" value ="black">Black</option>
+					</select>
+					<img id ="carpicture" src="red.jpg" alt="red color car"/>
+				</div>
+			</form>
+	</div><!-- end panel-->
+</body>
+</html>
